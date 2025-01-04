@@ -8,6 +8,10 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "extra": {
+      "supportsRTL": true,
+      "forcesRTL": true
+    },
     "ios": {
       "supportsTablet": true
     },
