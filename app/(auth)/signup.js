@@ -8,7 +8,6 @@ import {
   TextInput,
   View,
 } from "react-native";
-
 export default function SignUp(props) {
   //avatar
   // 4 text inputs
@@ -17,6 +16,7 @@ export default function SignUp(props) {
   const [Email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   const [confirm, setconfirm] = useState("");
+
   return (
     <View
       style={{
@@ -65,7 +65,7 @@ export default function SignUp(props) {
             borderRadius: 20,
           }}
           placeholderTextColor={"white"}
-          placeholder="اسم المستحدم"
+          placeholder="اسم المستخدم"
         />
         <TextInput
           value={Email}
@@ -118,6 +118,7 @@ export default function SignUp(props) {
         }}
       >
         <Pressable
+          onPress={() => {}}
           style={{
             backgroundColor: "#CF3E3E",
             padding: 10,

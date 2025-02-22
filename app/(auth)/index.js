@@ -1,7 +1,48 @@
-import { Link } from "expo-router";
-import { Image, Text, View } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Link, useRouter } from "expo-router";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, Dimensions, Image, Text, View } from "react-native";
 
 export default function Home(props) {
+  const router = useRouter();
+  const [loading, setloading] = useState(true);
+
+  useEffect(() => {
+    checkSignInStatus();
+  }, []);
+
+  const checkSignInStatus = async () => {
+    console.log("111");
+    try {
+      const storedUser = await AsyncStorage.getItem("user");
+      console.log("  sign-ined", storedUser);
+      if (storedUser) {
+        console.log("  sign-ined", storedUser);
+        setTimeout(() => {
+          router.replace("(main)/home");
+          setloading(false);
+        }, 500);
+      } else {
+        setloading(false);
+      }
+    } catch (error) {
+      setloading(false);
+    }
+  };
+  if (loading) {
+    return (
+      <View
+        style={{
+          justifyContent: "center",
+          alignItem: "center",
+          backgroundColor: "white",
+          ...Dimensions.get("window"),
+        }}
+      >
+        <ActivityIndicator size={"large"} color="black" />
+      </View>
+    );
+  }
   return (
     <View
       style={{

@@ -1,5 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter, useNavigation } from "expo-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Image,
   KeyboardAvoidingView,
@@ -18,6 +19,8 @@ export default function Signin(props) {
   const navigation = useNavigation();
   const [Email, setEmail] = useState("");
   const [password, setpassword] = useState("");
+  const [isSignedIn, setIsSignedIn] = useState(false);
+  
   return (
     <View
       style={{
@@ -93,6 +96,7 @@ export default function Signin(props) {
       >
         <Pressable
           onPress={() => {
+            AsyncStorage.setItem("user", JSON.stringify({ Email, password }));
             router.replace("/(main)/home");
           }}
           style={{
