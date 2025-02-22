@@ -31,6 +31,8 @@ export let POSTS = [
   {
     username: "fatima",
     id: 2,
+    avatar:
+      "https://th.bing.com/th/id/OIP.6GKR6HOb5KRlZ6YGDvxc9gAAAA?rs=1&pid=ImgDetMain",
     post: "  قهوة المساء ليست مجرد مشروب , بل هي لقاء مع النفس",
     likes: 20,
     image:

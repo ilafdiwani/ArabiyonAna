@@ -42,7 +42,8 @@ const AddPost = ({ navigation }) => {
         id: 3,
         post: content,
         likes: 0,
-        avatar: "https://cdn-icons-png.flaticon.com/512/6858/6858485.png",
+        avatar:
+          "https://th.bing.com/th/id/OIP.6GKR6HOb5KRlZ6YGDvxc9gAAAA?rs=1&pid=ImgDetMain",
         image,
         comments: [],
       });
