@@ -14,6 +14,13 @@ const StudStack = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image
+          style={styles.logo}
+          source={require("../../../assets/images/logo.png")} // Adjust path as needed
+          resizeMode="contain"
+        />
+      </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
@@ -46,6 +53,8 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "column", // Stack buttons vertically
     alignItems: "center",
+    margin: 35,
+    padding: 20,
   },
   button: {
     backgroundColor: "#CF3E3E",
@@ -57,11 +66,26 @@ const styles = StyleSheet.create({
     margin: 30,
     borderRadius: 40,
     height: 60,
+    padding: 40,
   },
   buttonText: {
     color: "white",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  logoContainer: {
+    flex: 0.2, // You can adjust the height of the container as needed
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 40, // Adjust the space between the logo and other elements
+  },
+  logo: {
+    width: 380, // Set the desired width of the logo (adjust as necessary)
+    height: 350, // Set the desired height of the logo (adjust as necessary)
+    // You can also use percentages to make the logo responsive:
+    // width: '80%', // For responsive resizing based on screen size
+    // height: '80%', // For responsive resizing based on screen size
+    marginBottom: 150,
   },
 });
 
