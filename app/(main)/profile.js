@@ -16,7 +16,7 @@ const Profile = () => {
   const router = useRouter();
   const [user, setUser] = useState({
     avatar:
-      "https://th.bing.com/th/id/OIP.6GKR6HOb5KRlZ6YGDvxc9gAAAA?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/6f/dd/74/6fdd7491a9f5dddc332e5a955100097a.jpg",
     username: "fatima",
   });
   let posts = POSTS;

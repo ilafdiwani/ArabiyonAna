@@ -21,6 +21,7 @@ const StudStack = () => {
           resizeMode="contain"
         />
       </View>
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

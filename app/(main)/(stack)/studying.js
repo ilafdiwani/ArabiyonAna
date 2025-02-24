@@ -11,12 +11,26 @@ import * as Speech from "expo-speech";
 
 const words = [
   { en: "Hello", ar: "مرحبا" },
-  { ar: "تفاحة", en: "Apple" },
-  { ar: "موز", en: "Banana" },
-  { ar: "برتقال", en: "Orange" },
+  { ar: "تُفَّاحَة", en: "Apple" },
+  { ar: " مَوْز", en: "Banana" },
+  { ar: "بُرْتُقَال", en: "Orange" },
   { ar: "أناناس", en: "Pineapple" },
   { ar: "عنب", en: "Grapes" },
   { ar: "بطيخ", en: "Watermelon" },
+  { en: "Water ", ar: "مَاء" },
+  { ar: "مَنْزِل", en: "house" },
+  { ar: "طَعَام", en: "Food" },
+  { ar: "طِفْل", en: "Child" },
+  { ar: "شَمْس", en: "Sun" },
+  { ar: "قَمَر", en: "Moon" },
+  { ar: " كِتَاب", en: "Book" },
+  { en: "mother", ar: "أُمّ" },
+  { ar: "أَب", en: "Father" },
+  { ar: "مَدْرَسَة", en: "School" },
+  { ar: "سَيَّارَة", en: "Car" },
+  { ar: "جَيِّد", en: "Good" },
+  { ar: "قَلَم", en: "Pen" },
+  { ar: "صَدِيق", en: "Friend" },
 ];
 const Studying = () => {
   const speak = (text) => {
@@ -30,12 +44,13 @@ const Studying = () => {
           justifyContent: "center",
           alignItems: "center",
           gap: 10,
+          backgroundColor: "white",
         }}
         renderItem={({ item, index }) => (
           <View
             style={{
               ...styles.itemContainer,
-              backgroundColor: index % 2 == 0 ? "#F3F3F3" : "#FFF",
+              backgroundColor: index % 2 == 0 ? "#F5F5F5" : "#ddd",
             }}
           >
             <View style={styles.arabicContainer}>
@@ -65,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: "center", // Center content vertically
     borderWidth: 1,
     borderRadius: 15,
-    borderColor: "#E0E0E0", // Light border color
+    borderColor: "#CF3E3E", // Light border color
     paddingHorizontal: 10, // Padding inside the item
   },
   arabicContainer: {

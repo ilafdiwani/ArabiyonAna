@@ -17,6 +17,102 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 export let POSTS = [
   {
+    username: "lama",
+    id: 5,
+    post: " في رحلة العمر و الأيام مسرعة لا تنسى من انت و ما وجهة السفر",
+    likes: 123,
+    avatar:
+      "https://i.pinimg.com/originals/00/c7/fa/00c7fad4e876f9ce8b30ea5b220fb21e.jpg",
+
+    comments: [
+      { username: "tia", content: "رائع", date: Date.now() },
+      { username: "hala", content: "بيت جميل ,احببته ", date: Date.now() },
+      { username: "حسام", content: "🤩🤩", date: Date.now() },
+      { username: "سليم", content: "احسنت 🤩", date: Date.now() },
+      { username: "rola", content: "😍", date: Date.now() },
+      { username: "hassan", content: "استمري😍😍", date: Date.now() },
+    ],
+  },
+  {
+    username: "مصطفى",
+    id: 6,
+    post: "   🫀 كل شيء سيأتيك في الوقت المناسب , كن صبورا ",
+    likes: 133,
+    avatar:
+      "https://i.pinimg.com/736x/06/1f/e9/061fe9ef081914de663e78c0426a504d.jpg",
+    comments: [
+      {
+        username: "اسماء",
+        content: " 🙏 الله يؤخر الجميل ليجعله اجمل",
+        date: Date.now(),
+      },
+      {
+        username: "batoul",
+        content: "💫💫الصبر علاج لكل شيء",
+        date: Date.now(),
+      },
+      { username: "abed", content: "👍رائع", date: Date.now() },
+      { username: "adam", content: "❤️❤️", date: Date.now() },
+    ],
+  },
+  {
+    username: "batoul",
+    id: 7,
+    post: "  تضيق و تضيق ثم تفرج ... تلك الحياة",
+    likes: 79,
+    avatar:
+      "https://th.bing.com/th/id/OIP.5d6d_-wimEq_cyhahEKKNwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3",
+    image:
+      "https://i.pinimg.com/736x/6a/5a/fb/6a5afb0ec8a2d7a4cfb9b926b37bb560.jpg",
+    comments: [
+      {
+        username: "محمد",
+        content: "  🫶🏼 ان الله على كل شيء قدير",
+        date: Date.now(),
+      },
+      {
+        username: "احمد",
+        content: " 🙏🏼عندما يشاء الله ,يحول الظلمة الى نور ",
+        date: Date.now(),
+      },
+      { username: "jad", content: "ان بعد العسر يسرا", date: Date.now() },
+      { username: "lara", content: "🤍🤍", date: Date.now() },
+    ],
+  },
+  {
+    username: "fatima",
+    id: 2,
+    post: "  يا ايها الانسان ما هذا القلق ؟  أوليس ربك قد تكفل ما خلق؟  أوليس بعد العسر يسرا كما بعد الليالي يأتي الفلق ؟  ",
+    likes: 109,
+    avatar:
+      "https://i.pinimg.com/originals/6f/dd/74/6fdd7491a9f5dddc332e5a955100097a.jpg",
+
+    comments: [
+      {
+        username: "tala",
+        content: " 🥹🥹 الراحة في هذا البيت",
+        date: Date.now(),
+      },
+      {
+        username: "souaad",
+        content: "الله على كل شيء قدير🥹",
+        date: Date.now(),
+      },
+      { username: "jawad", content: "🤲🤲", date: Date.now() },
+      { username: "abir", content: " رائع🫀 ", date: Date.now() },
+      {
+        username: "sally",
+        content: "  🙏اللهم الفرج بعد كل ضيق ",
+        date: Date.now(),
+      },
+      {
+        username: "youssef",
+        content: " من اجمل ما قرأت اليوم ",
+        date: Date.now(),
+      },
+    ],
+  },
+  {
     username: "mohammad",
     id: 3,
     post: "  اجمل حب هو الذي نعثر عليه أثناء بحثنا عن شيء آخر",
@@ -32,7 +128,7 @@ export let POSTS = [
     username: "fatima",
     id: 2,
     avatar:
-      "https://th.bing.com/th/id/OIP.6GKR6HOb5KRlZ6YGDvxc9gAAAA?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/6f/dd/74/6fdd7491a9f5dddc332e5a955100097a.jpg",
     post: "  قهوة المساء ليست مجرد مشروب , بل هي لقاء مع النفس",
     likes: 20,
     image:
@@ -282,7 +378,7 @@ export default function Home(props) {
                           borderRadius: 10,
                           backgroundColor: "#f9f9f9",
                           borderWidth: 1,
-                          borderColor: "#ddd",
+                          borderColor: "#grey",
                         }}
                       >
                         <Text style={{ fontWeight: "bold" }}>

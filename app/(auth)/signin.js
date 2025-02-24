@@ -20,7 +20,7 @@ export default function Signin(props) {
   const [Email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   const [isSignedIn, setIsSignedIn] = useState(false);
-  
+
   return (
     <View
       style={{
