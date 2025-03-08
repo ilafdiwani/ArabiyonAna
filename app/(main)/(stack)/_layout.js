@@ -6,7 +6,7 @@ export default function ChallengesAndStudyingStack(props) {
       <Stack.Screen
         name="stud1"
         options={{
-          title: "",
+          headerShown: false,
         }}
       />
       <Stack.Screen

@@ -26,6 +26,7 @@ export default function Main() {
         options={{
           title: "",
           headerShown: false,
+          header: () => null,
           tabBarIcon: ({ color, focused }) => (
             <FontAwesome6
               name="book-open"
