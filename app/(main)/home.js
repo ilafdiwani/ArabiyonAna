@@ -17,6 +17,44 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 export let POSTS = [
   {
+    username: "batoul",
+    id: 7,
+    post: "  تضيق و تضيق ثم تفرج ... تلك الحياة",
+    likes: 79,
+    avatar:
+      "https://th.bing.com/th/id/OIP.5d6d_-wimEq_cyhahEKKNwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3",
+    image:
+      "https://i.pinimg.com/736x/6a/5a/fb/6a5afb0ec8a2d7a4cfb9b926b37bb560.jpg",
+    comments: [
+      {
+        username: "محمد",
+        content: "  🫶🏼 ان الله على كل شيء قدير",
+        date: Date.now(),
+      },
+      {
+        username: "احمد",
+        content: " 🙏🏼عندما يشاء الله ,يحول الظلمة الى نور ",
+        date: Date.now(),
+      },
+      { username: "jad", content: "ان بعد العسر يسرا", date: Date.now() },
+      { username: "lara", content: "🤍🤍", date: Date.now() },
+    ],
+  },
+  {
+    username: "mareine ",
+    avatar:
+      "https://th.bing.com/th/id/OIP.gwlydGCrlPtM1yeMHi66_wHaKd?w=155&h=219&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    id: 10,
+    post: "❤️انت تستحق السعادة  ",
+    image:
+      "https://th.bing.com/th/id/OIP.gwlydGCrlPtM1yeMHi66_wHaKd?w=155&h=219&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    likes: 120,
+    comments: [
+      { username: "sara", content: " ❤️❤️", date: Date.now() },
+      { username: "نارين ", content: " ✨​✨​ ", date: Date.now() },
+    ],
+  },
+  {
     username: "lama",
     id: 5,
     post: " في رحلة العمر و الأيام مسرعة لا تنسى من انت و ما وجهة السفر",
@@ -31,6 +69,24 @@ export let POSTS = [
       { username: "سليم", content: "احسنت 🤩", date: Date.now() },
       { username: "rola", content: "😍", date: Date.now() },
       { username: "hassan", content: "استمري😍😍", date: Date.now() },
+    ],
+  },
+  {
+    username: "fatima",
+    id: 2,
+    avatar:
+      "https://i.pinimg.com/originals/6f/dd/74/6fdd7491a9f5dddc332e5a955100097a.jpg",
+    post: "  قهوة المساء ليست مجرد مشروب , بل هي لقاء مع النفس",
+    likes: 20,
+    image:
+      "https://i.pinimg.com/originals/ca/65/6f/ca656f3acf77be50e0333136b1c13acc.jpg",
+    comments: [
+      {
+        username: "chaymae",
+        content: "انا استيقظ لأشرب القهوة ولا أشرب القهوة لأستيقظ",
+        date: Date.now(),
+      },
+      { username: "youssef", content: " قهوة تنعش الروح", date: Date.now() },
     ],
   },
   {
@@ -56,32 +112,22 @@ export let POSTS = [
     ],
   },
   {
-    username: "batoul",
-    id: 7,
-    post: "  تضيق و تضيق ثم تفرج ... تلك الحياة",
-    likes: 79,
-    avatar:
-      "https://th.bing.com/th/id/OIP.5d6d_-wimEq_cyhahEKKNwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3",
+    username: "ella ",
+    avatar: "",
+    id: 9,
+    post: " ليتنا كالمطر نسافر مع الغيوم أينما نريد و نسقط على نوافذ من نحب ",
     image:
-      "https://i.pinimg.com/736x/6a/5a/fb/6a5afb0ec8a2d7a4cfb9b926b37bb560.jpg",
+      "https://saudia9.com/wp-content/uploads/2021/02/%D8%B5%D9%88%D8%B1-%D9%85%D8%B7%D8%B1-1.jpg",
+    likes: 237,
     comments: [
-      {
-        username: "محمد",
-        content: "  🫶🏼 ان الله على كل شيء قدير",
-        date: Date.now(),
-      },
-      {
-        username: "احمد",
-        content: " 🙏🏼عندما يشاء الله ,يحول الظلمة الى نور ",
-        date: Date.now(),
-      },
-      { username: "jad", content: "ان بعد العسر يسرا", date: Date.now() },
-      { username: "lara", content: "🤍🤍", date: Date.now() },
+      { username: "تمار", content: "ما شاء الله", date: Date.now() },
+      { username: "ليلى ", content: " ✨​✨​ ", date: Date.now() },
     ],
   },
+
   {
     username: "fatima",
-    id: 2,
+    id: 11,
     post: "  يا ايها الانسان ما هذا القلق ؟  أوليس ربك قد تكفل ما خلق؟  أوليس بعد العسر يسرا كما بعد الليالي يأتي الفلق ؟  ",
     likes: 109,
     avatar:
@@ -124,24 +170,7 @@ export let POSTS = [
       { username: "samir", content: "لهذا الحب معنى حقيقي", date: Date.now() },
     ],
   },
-  {
-    username: "fatima",
-    id: 2,
-    avatar:
-      "https://i.pinimg.com/originals/6f/dd/74/6fdd7491a9f5dddc332e5a955100097a.jpg",
-    post: "  قهوة المساء ليست مجرد مشروب , بل هي لقاء مع النفس",
-    likes: 20,
-    image:
-      "https://i.pinimg.com/originals/ca/65/6f/ca656f3acf77be50e0333136b1c13acc.jpg",
-    comments: [
-      {
-        username: "chaymae",
-        content: "انا استيقظ لأشرب القهوة ولا أشرب القهوة لأستيقظ",
-        date: Date.now(),
-      },
-      { username: "youssef", content: " قهوة تنعش الروح", date: Date.now() },
-    ],
-  },
+
   {
     username: "ilaf",
     id: 1,
@@ -203,6 +232,7 @@ export default function Home(props) {
       }
     }
   };
+
   const Post = ({
     post,
     username,
@@ -213,6 +243,7 @@ export default function Home(props) {
     avatar,
   }) => {
     const [likes, setLikes] = useState(postLikes || 0);
+    const [liked, setLiked] = useState(false);
     const [comment, setComment] = useState(null);
     const [showComments, setShowComments] = useState(null);
     const toggleComments = () => {
@@ -221,9 +252,7 @@ export default function Home(props) {
     return (
       <KeyboardAvoidingView
         behavior={Platform.OS == "ios" ? "padding" : "height"}
-        style={{
-          flex: 1,
-        }}
+        style={{ flex: 1 }}
       >
         <View
           style={{
@@ -248,9 +277,9 @@ export default function Home(props) {
               }}
               resizeMode="cover"
               source={{
-                uri:
-                  avatar ||
-                  "https://icons.veryicon.com/png/o/miscellaneous/standard/avatar-15.png",
+                uri: avatar
+                  ? avatar.trim()
+                  : "https://icons.veryicon.com/png/o/miscellaneous/standard/avatar-15.png",
               }}
             />
             <Text
@@ -267,7 +296,7 @@ export default function Home(props) {
           </View>
           <Text
             style={{
-              textAlign: "",
+              textAlign: "left",
               backgroundColor: "#bdc3c744",
               borderRadius: 10,
               padding: 5,
@@ -298,7 +327,13 @@ export default function Home(props) {
           >
             <TouchableOpacity
               onPress={() => {
-                setLikes(likes + 1); // Increment the likes count by 1
+                if (liked) {
+                  setLikes(likes - 1); // Increment the likes count by 1
+                  setLiked(false); // Increment the likes count by 1
+                } else {
+                  setLikes(likes + 1); // Increment the likes count by 1
+                  setLiked(true); // Increment the likes count by 1
+                }
               }}
               style={{
                 backgroundColor: "rgba(207, 201, 201, 0.8)",
@@ -308,7 +343,11 @@ export default function Home(props) {
               }}
             >
               <Text>{likes}</Text>
-              <EvilIcons name="like" size={24} color="#CF3E3E" />
+              <EvilIcons
+                name="like"
+                size={24}
+                color={liked ? "rgba(249, 176, 5, 0.8)" : "#CF3E3E"}
+              />
             </TouchableOpacity>
             <TouchableOpacity
               onPress={toggleComments}

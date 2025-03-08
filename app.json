@@ -10,7 +10,13 @@
     "newArchEnabled": true,
     "extra": {
       "supportsRTL": true,
-      "forcesRTL": true
+      "forcesRTL": true,
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7f87c67e-8b82-4cf0-9dbb-9e802f0603f4"
+      }
     },
     "ios": {
       "supportsTablet": true
@@ -19,7 +25,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.taladib.ArabiyonAna"
     },
     "web": {
       "bundler": "metro",

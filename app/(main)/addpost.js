@@ -74,8 +74,8 @@ const AddPost = ({ navigation }) => {
         {image ? (
           <Image
             source={{ uri: image }}
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             resizeMode="cover"
             style={styles.imagePreview}
           />
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 35,
+    marginBottom: 5,
     textAlign: "center",
   },
   input: {
